@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(131, 16, 79, 0.797);
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+section .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(wave.png);
+    background-size: 1000px 100px;
+}
+section .wave.wave1 {
+    animation: animate1 20s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+section .wave.wave2 {
+    animation: animate2 5s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 0;
+}
+section .wave.wave3 {
+    animation: animate1 10s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+section .wave.wave4 {
+    transform: scaleY(-1);
+    top: 0;
+    animation: animate1 20s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+section .wave.wave5 {
+    transform: scaleY(-1);
+    top: 0;
+    animation: animate2 5s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 0;
+}
+section .wave.wave6 {
+    transform: scaleY(-1);
+    top: 0;
+    animation: animate1 10s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+@keyframes animate1 {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate2 {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}

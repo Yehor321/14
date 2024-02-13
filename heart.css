@@ -1,0 +1,45 @@
+#heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    z-index: 1000;
+    animation: heart 5s linear infinite;
+    transition: 1s;
+}
+@keyframes heart {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+      }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+}
+#heart.done {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+#text_p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  z-index: 999;
+  transition: 1s;
+}
+#text_p p{
+  color: white;
+  font-size: 30px; 
+  font-family: 'Courier New', Courier, monospace;
+}
+#text_p.done1 {
+  opacity: 1;
+}
